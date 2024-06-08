@@ -71,9 +71,9 @@ runs:
   using: 'composite'
   steps:
     - run: |
-        curl -LO https://curl.se/download/curl-8.7.1-win64-mingw.zip
-        tar -xzf curl-8.7.1-win64-mingw.zip -C $HOME
-        cp $HOME/curl-8.7.1-win64-mingw/bin/curl.exe "C:/Program Files/Git/usr/bin/curl.exe"
+        curl -LO https://curl.se/windows/dl-8.7.1_1/curl-8.7.1_1-win64-mingw.zip
+        tar -xzf curl-8.7.1_1-win64-mingw.zip -C $HOME
+        cp $HOME/curl-8.7.1_1-win64-mingw/bin/curl.exe "C:/Program Files/Git/usr/bin/curl.exe"
       shell: cmd
     - run: $GITHUB_ACTION_PATH/script.sh
       id: tfsec
