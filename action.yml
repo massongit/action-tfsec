@@ -70,6 +70,8 @@ outputs:
 runs:
   using: 'composite'
   steps:
+    - run: choco install curl --version=8.7.1
+      shell: cmd
     - run: $GITHUB_ACTION_PATH/script.sh
       id: tfsec
       shell: bash
